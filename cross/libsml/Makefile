@@ -12,17 +12,13 @@ COMMENT  = libSML is a library which implements the Smart Message Language (SML)
 LICENSE  = GPLv3
 
 CONFIGURE_TARGET = nop
-#INSTALL_TARGET = myInstall
+INSTALL_TARGET = install_target install_pc_file
 GNU_CONFIGURE = 0
 
 include ../../mk/spksrc.cross-cc.mk
 
-.PHONY myInstall:
+.PHONY install_pc_file:
 
-myInstall:
-
-	mkdir -p $(STAGING_INSTALL_PREFIX)/usr/lib/pkgconfig
-
-        #echo $(WORK_DIR)/$(PKG_DIR)/sml/lib/libsml.* $(STAGING_INSTALL_PREFIX)/usr/lib/
-
-	echo  $(WORK_DIR)/$(PKG_DIR)/sml.pc $(STAGING_INSTALL_PREFIX)/usr/lib/pkgconfig/
+install_pc_file:
+	mkdir -p $(STAGING_INSTALL_PREFIX)/lib/pkgconfig
+	cp $(WORK_DIR)/$(PKG_DIR)/sml.pc $(STAGING_INSTALL_PREFIX)/lib/pkgconfig/
