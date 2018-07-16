@@ -1,0 +1,15 @@
+--- test/Makefile	2018-06-08 20:09:35.000000000 +0000
++++ ../../libsml-master/test/Makefile	2018-07-16 20:26:58.000000000 +0000
+@@ -27,10 +27,10 @@
+ 	src/sml_message_test.o
+ 
+ test_run: libsml test
+-	@./test
++#	@./test
+ 
+ test : $(UNITY) $(OBJS) $(LIBSML)
+-	$(CC) $(CFLAGS) $(LIBS) $^ test_main.c -o test $(LIBS)
++	$(LDSHARED) $(CFLAGS) $(LIBS) $(LDFLAGS)$^ test_main.c -o test $(LIBS)
+ 
+ .PHONY: code
+ libsml : 

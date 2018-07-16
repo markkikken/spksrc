@@ -1,0 +1,11 @@
+--- sml/Makefile	2018-06-08 20:09:35.000000000 +0000
++++ ../../libsml-master/sml/Makefile	2018-07-16 20:15:47.000000000 +0000
+@@ -66,7 +66,7 @@
+ ifeq ($(UNAME), Darwin)
+ 	$(CC) $(LIBS) -dynamiclib -install_name $(SONAME) -o $@ $^
+ else
+-	$(LD) $(LIBS) -shared -soname $(SONAME) -o $@ $^
++	$(LDSHARED) $(LIBS) $(LDFLAGS) -o $@ $^
+ endif
+ 
+ $(OBJ_LIB): $(OBJS)
