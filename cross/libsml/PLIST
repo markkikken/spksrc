@@ -1,2 +1,3 @@
 lnk:lib/libsml.so
 lib:lib/libsml.so.1
+bin:bin/sml_server
