@@ -1,0 +1,15 @@
+bin:bin/mbus-serial-request-data
+bin:bin/mbus-serial-request-data-multi-reply
+bin:bin/mbus-serial-scan
+bin:bin/mbus-serial-scan-secondary
+bin:bin/mbus-serial-select-secondary
+bin:bin/mbus-serial-switch-baudrate
+bin:bin/mbus-tcp-request-data
+bin:bin/mbus-tcp-request-data-multi-reply
+bin:bin/mbus-tcp-scan
+bin:bin/mbus-tcp-scan-secondary
+bin:bin/mbus-tcp-select-secondary
+lnk:lib/libmbus.so
+lnk:lib/libmbus.so.0
+lib:lib/libmbus.so.0.0.8
+rsc:lib/pkgconfig/libmbus.pc
