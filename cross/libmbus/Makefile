@@ -13,11 +13,10 @@ LICENSE  = BSD 3-Clause License
 
 GNU_CONFIGURE = 1
 CONFIGURE_ARGS =
-CONFIGURE_TARGET = build_sh
-#COMPILE_TARGET = nop
+PRE_CONFIGURE_TARGET = automake
 
 include ../../mk/spksrc.cross-cc.mk
 
-.PHONY build_sh:
-build_sh:
-	cd $(WORK_DIR)/$(PKG_DIR);chmod +x build.sh;./build.sh
+.PHONY automake:
+automake:
+	cd $(WORK_DIR)/$(PKG_DIR) && automake --add-missing
