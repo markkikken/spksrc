@@ -2,6 +2,7 @@ PKG_NAME = libmbus
 PKG_VERS = 0.8.0
 PKG_EXT = tar.gz
 PKG_DIST_NAME = $(PKG_VERS).$(PKG_EXT)
+PKG_DIST_FILE = $(PKG_NAME)-$(PKG_VERS).$(PKG_EXT)
 PKG_DIST_SITE = https://github.com/rscada/libmbus/archive/
 PKG_DIR = $(PKG_NAME)-$(PKG_VERS)
 
@@ -19,4 +20,4 @@ include ../../mk/spksrc.cross-cc.mk
 
 .PHONY automake:
 automake:
-	cd $(WORK_DIR)/$(PKG_DIR) && automake --add-missing
+	cd $(WORK_DIR)/$(PKG_DIR) && aclocal && automake --add-missing
