@@ -15,5 +15,5 @@ include ../../mk/spksrc.cross-cc.mk
 
 GNU_CONFIGURE = 1
 ifeq ($(findstring $(ARCH), $(ARM5_ARCHES)),$(ARCH))
-CONFIGURE_ARGS = --disable-assembly
+CONFIGURE_ARGS = --disable-assembly $(TC_CONFIGURE_ARGS)
 endif
