@@ -1,0 +1,8 @@
+lnk:lib/libmicrohttpd.so
+lnk:lib/libmicrohttpd.so.12
+lib:lib/libmicrohttpd.so.12.46.0
+rsc:lib/pkgconfig/libmicrohttpd.pc
+rsc:share/info/libmicrohttpd-tutorial.info
+rsc:share/info/libmicrohttpd.info
+rsc:share/info/libmicrohttpd_performance_data.png
+rsc:share/man/man3/libmicrohttpd.3
