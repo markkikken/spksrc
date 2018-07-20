@@ -16,5 +16,5 @@ include ../../mk/spksrc.cross-cc.mk
 GNU_CONFIGURE = 1
 CONFIGURE_ARGS = --enable-shared
 ifeq ($(findstring $(ARCH), $(ARM5_ARCHES)),$(ARCH))
-CONFIGURE_ARGS += --disable-assembler
+CONFIGURE_ARGS += --disable-assembler $(TC_CONFIGURE_ARGS)
 endif
